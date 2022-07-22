@@ -1,0 +1,148 @@
+.portfolio-proj-container
+{
+}
+.portfolio-proj-content
+{
+    background-color: #011627;
+}
+.portfolio-proj-content-header
+{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-proj-content-header span 
+{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #032948;
+    padding: 3%;
+    border-radius: 10px;
+}
+@media screen and (max-width: 750px)
+{
+.portfolio-proj-content-header{
+    padding-top:10%;
+    font-size: 1.1rem;
+}
+.portfolio-proj-content-header span 
+{
+    width: 80%;
+}
+}
+@media screen and (max-width: 400px)
+{
+.portfolio-proj-content-header{
+    padding-top:20%;
+}
+}
+.proj-content-image
+{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 10%; 
+}
+.proj-content-image img 
+{
+    height: 100%;
+    border-radius: 10px;
+}
+.proj-content-details
+{
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    background-color: #032948;
+    display: flex;
+    flex-direction: column;
+}
+.proj-content-details-col
+{
+    height: auto;
+    width: 100%;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    margin-bottom: 15px;
+}
+.proj-content-details-col-head
+{
+    height: 40%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+.proj-content-details-col-body
+{
+    width: 80%;
+    height: 60%;
+    padding-left: 5%;
+}
+.portfolio-proj-live
+{
+    height: 100px;
+    background-color: #011627;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-proj-live button 
+{
+    padding: 5px 30px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    background-color: #c21e1e;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+}
+.portfolio-proj-live button:hover 
+{
+    background-color: #9a1b1b;
+    transition: all 0.1s ease;
+}
+
+@media screen and (max-width: 750px) {
+    .proj-content-image
+    {
+        width: 100%;
+        height: auto;
+        padding: 10%;
+    }
+    .proj-content-image img 
+    {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+    .proj-content-details
+    {
+        flex-direction: column;
+        padding: 0% 5%;
+    }
+    .proj-content-details
+    {
+        height: auto;
+    }
+    .proj-content-details-col
+    {
+        height: auto;
+        padding: 10% 0%;
+        width: 100%;
+        flex-direction: column;
+        /* margin-bottom: 20px; */
+    }
+}

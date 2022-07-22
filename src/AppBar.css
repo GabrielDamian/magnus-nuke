@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.app-bar-container
+{
+    height: 10vh;
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    position: sticky;
+    left:0;
+    top:0;
+    z-index:1;
+
+    border-radius: 5px;
+    background-color: rgba(1, 22, 39, 0.5);
+     -webkit-backdrop-filter: blur(4px);
+     -o-backdrop-filter: blur(4px);
+     -moz-backdrop-filter: blur(4px);
+ 
+     backdrop-filter: blur(4px);
+     
+}
+
+.app-left-container
+{
+    height: 100%;
+    width: 30%;
+}
+.app-left-container img 
+{
+    height: 100%;
+    margin-left:10px;
+}
+.app-right-container
+{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+.app-bar-item
+{
+    height: 100%;
+    min-width: 100px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.contact-btn
+{
+    height: 70%;
+    width: 100%;
+    background-color: #c21e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.contact-btn:hover 
+{
+    background-color: #a02323;
+    color: white;
+    transition: all 0.2s ease;
+}
+.app-bar-item:hover 
+{
+    color: gray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+@media screen and (max-width: 1000px) {
+    .app-bar-item
+    {
+        min-width:50px;
+        margin-right: 15px;
+    }
+
+}
+
+
+@media screen and (max-width: 750px) {
+    .app-right-container
+    {
+        display: none;
+    }
+    .intro-home-container
+    {
+        height: 85vh;
+    }
+    .intro-home-left
+    {
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    .intro-home-right
+    {
+        width:0%;
+    }
+    .section-1
+    {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 10%;
+        margin-top: 5%;
+        padding-bottom: 0%;
+    }
+    .section-1-right-top
+    {
+        font-size: 1.1rem;
+        padding: 0% 5%;
+    }
+    .section-1-right-bottom
+    {
+        font-size: 0.8rem;
+        padding: 10%;
+    }
+    .section-1-left
+    {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section-1-left img 
+    {
+        width: 70%;
+    }
+    .section-1-right
+    {
+        width: 100%;
+    }
+    .dude-container
+    {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0px;
+    }
+    .dude-data-name
+    {
+        text-align: center;
+    }
+    .dude-data-role
+    {
+        text-align: center;
+    }
+    .section-2
+    {
+        padding: 0% 10%;
+        /* margin-top:50%; */
+    }
+    .section-3
+    {
+    }
+    .section-2-cards-container
+    {
+        flex-direction: column;
+    }
+    .service-card-elem
+    {
+        width:100%;
+        margin-bottom: 20px;
+    }
+    .portfoli-content
+    {
+        padding: 0% 10%;
+    }
+    .portfolio-item
+    {
+        width: 100%;
+        height: auto;
+        margin: 10% 0%;
+    }
+    .portfolio-item img 
+    {
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    .contact-us-left
+    {
+        font-size: 0.9rem;
+        width: 50%;
+    }
+    .contact-us-right 
+    {
+        width: 50%;
+    }
+    .contact-us-right button
+    {
+        font-size: 0.6rem;
+        padding: 10px 15px;
+    }
+    .contact-us
+    {
+        margin: 20px 0px;
+    }
+    .footer
+    {
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-left-top img
+    {
+        width: 100%;
+    }
+    .footer-left
+    {
+        width: 100%;
+    }
+    .footer-right
+    {
+        width: 100%;
+    }
+    .footer-right-column
+    {
+        width: 100%;
+    }
+    /* Servicii */
+   
+  }
