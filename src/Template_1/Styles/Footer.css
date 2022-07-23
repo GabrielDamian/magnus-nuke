@@ -1,0 +1,137 @@
+.t1-footer-container
+{
+    height: 300px;
+}
+.t1-footer-top
+{
+    height: 40%;
+    background-color: #344157;
+    padding: 2% 5%;
+}
+.t1-footer-top-name
+{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.t1-footer-top-name span 
+{
+    display: block;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.t1-footer-top-icons
+{
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+.t1-footer-top-icons img 
+{
+    height: 70%;
+    margin-right: 20px;
+}
+.t1-footer-bottom
+{
+    padding: 1% 0%;
+    height: 60%;
+    background-color: #24324a;
+}
+.t1-footer-bottom-top
+{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.t1-footer-bottom-top img 
+{
+    height: 100%;
+}
+.t1-footer-bottom-bottom
+{
+    height: 50%;
+}
+.t1-footer-bottom-bottom-copy
+{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #818a9c;
+}
+.t1-footer-bottom-bottom-data
+{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.t1-footer-bottom-icons
+{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin:0px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #818a9c;
+}
+.t1-footer-bottom-icons:hover 
+{
+    color: white;
+    transition: all 0.2s ease;
+}
+.t1-footer-bottom-icons img 
+{
+    height: 50%;
+}
+.t1-footer-bottom-icons span 
+{
+    margin-left:10px;
+}
+
+@media screen and (max-width: 750px) {
+    .t1-footer-container
+    {
+        height: auto;
+    }
+    .t1-footer-top
+    {
+        padding: 20px 10px;
+    }
+    .t1-footer-top-icons img
+    {
+        height: 50px;
+        padding: 10px 0px;
+    }
+    .t1-footer-bottom-bottom-data
+    {
+        flex-direction: column;
+    }
+    .t1-footer-bottom-top img 
+    {
+        height: 70px;
+    }
+    .t1-footer-bottom-bottom-copy
+    {
+        margin-bottom: 20px;
+    }
+    .t1-footer-bottom-icons
+    {
+        margin-bottom: 20px;
+    }
+    .t1-footer-bottom-icons img
+    {
+        height: 20px;
+    }
+}

@@ -8,7 +8,7 @@ import StoreIcon from './media/icons/store.png';
 import PlatformIcon from './media/icons/Platform.png';
 import Portfolio_1_bg  from './media/portfolio/1_bg.png';
 import PortfolioProject from './PortfolioProject';
-
+import Template_1 from './Template_1/Components/Home';
 
 function App() {
  
@@ -57,6 +57,7 @@ function App() {
               )
             })
           }
+          <Route path="/template-1" element={<Template_1/>}/>
       </Routes>
     </BrowserRouter>
   )

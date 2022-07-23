@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+.t1-home-container
+{
+    width: 100%;
+    position: relative;
+}
+.t1-section-1
+{
+    height: 100vh;
+    padding: 5%;
+    padding-top: 12%;
+}
+.t1-section-1-top
+{
+    height: 50%;
+}
+.t1-section-1-top-top
+{
+    height: 15%;
+    color: #d77b5d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.t1-section-1-top-center
+{
+    height: 40%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+.t1-section-1-top-bottom
+{
+    height: 40%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+}
+
+
+
+.t1-section-1-bottom
+{
+    height: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+   
+}
+.t1-section-1-bottom-center
+{
+    width: 80%;
+    height: 50%;
+    background-color: rgba(92, 103, 123, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+.t1-section-1-bottom-center input,select
+{
+    min-width:20%;
+    background-color: #5c677b;
+    outline: none;
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1rem;
+}
+.t1-section-1-bottom-center button 
+{
+    padding: 15px 20px;
+    background-color: #d77b5d;
+    outline: none;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+.t1-section-1-bottom-center button:hover{
+    color: black;
+    animation: color 0.2s ease;
+}
+.t1-section-2
+{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 8%;
+}
+.t1-room-item-container
+{
+    height: auto;
+    width: 27%;
+    font-family: 'Poppins', sans-serif;
+    transform: translateY(-15%);
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2);
+    padding-bottom: 30px;
+}
+.t1-room-item-img
+{
+    height: 50%;
+}
+.t1-room-item-img img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.t1-room-title
+{
+    height: 15%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #24324a;
+}
+.t1-room-price
+{
+    height: 15%;
+    padding: 2%;
+    color: #db876c;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.t1-room-desc
+{
+    padding: 10px 25px;
+    color: #8890a1;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.t1-section-3
+{
+    padding-top: 7%;    
+    height: auto;
+    
+}
+.t1-section-3-item
+{
+    height: auto;
+    padding: 2% 5%;
+    display: flex;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2);
+}
+.t1-section-3-left
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.t1-section-3-left img 
+{
+    height: 100%;
+    border-radius: 5px;
+}
+.t1-setion-3-right
+{
+    width: 50%;
+    height: 100%;
+}
+.t1-section-3-right-top
+{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.t1-section-3-right-bottom
+{
+    padding: 5% 10%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+    font-weight: 200;
+}
+
+.t1-section-4
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+}
+.t1-opt-item-flex
+{
+    padding: 10px;
+    width: 20%;
+    height: 150px;
+    margin: 50px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+.t1-opt-item-flex:hover
+{
+    border: 2px solid #d77b5d;
+    transition: all 0.2s ease;
+}
+.t1-opt-item-img
+{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t1-opt-item-img img 
+{
+    height: 100%;
+}
+.t1-opt-item-name
+{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 750px) {
+    /* SECTION 1 */
+    .t1-section-1
+    {
+        height: 85vh;
+        padding-top: 15vh;
+    }
+    .t1-section-1-top
+    {
+        height: 100%;
+    }
+    .t1-section-1-bottom
+    {
+        display: none;
+    }
+    .t1-section-1-top-top
+    {
+        align-items: flex-end;
+    }
+    .t1-section-1-top-center
+    {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+    .t1-section-1-top-bottom
+    {
+        align-items: flex-start;
+    }   
+    /* SECTION 2 */
+    .t1-section-2
+    {
+        height: auto;
+        flex-direction: column;
+    }
+    .t1-room-item-container
+    {
+        height: auto;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    /* SECTION 3 */
+    .t1-section-3-item
+    {
+        flex-direction: column;
+        height: auto;
+    }
+    .t1-section-3-left
+    {
+        width: 100%;
+        padding: 15px;
+    }
+    .t1-section-3-left img 
+    {
+        height: 100%;
+        width: 100%;
+
+    }
+    .t1-setion-3-right
+    {
+        width: 100%;
+        padding-top: 20px;
+    }
+    /* SECTION 4 */
+    .t1-section-4
+    {
+        padding: 30px 10px;
+    }
+    .t1-opt-item-flex
+    {
+        width: 40%;
+        margin: 10px;
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 1350px) {
+    .section-1-bottom-center
+    {
+        flex-wrap: wrap;
+    }
+
+}
