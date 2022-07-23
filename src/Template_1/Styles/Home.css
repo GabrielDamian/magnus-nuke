@@ -155,8 +155,15 @@
 {
     padding-top: 7%;    
     height: auto;
-    
 }
+.section-3-title
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
 .t1-section-3-item
 {
     height: auto;
@@ -176,8 +183,10 @@
 }
 .t1-section-3-left img 
 {
-    height: 100%;
-    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
 }
 .t1-setion-3-right
 {

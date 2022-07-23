@@ -44,7 +44,7 @@ const Items2 = [
             {
                 Items1.map((el)=>{
                     return(
-                        <a href='https://www.google.com'>{el.name}</a>
+                        <a href=''>{el.name}</a>
                     )
                 })
             }
@@ -56,7 +56,7 @@ const Items2 = [
                 {
                     Items2.map((el)=>{
                         return(
-                            <a href='https://www.google.com'>{el.name}</a>
+                            <a href=''>{el.name}</a>
                         )
                     })
                 }

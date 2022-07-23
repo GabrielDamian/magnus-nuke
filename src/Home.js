@@ -253,18 +253,6 @@ const Home  = ()=>{
           desc: 'cevasd23d2 d23d 2da ceva',
           link: '/portfolio-1'
         },
-        {
-          title:'Pensiunea X',
-          img: Portfolio1,
-          desc: 'cev 3f 4f dfvdvd cva ceva',
-          link: '/portfolio-2'
-        },
-        {
-          title:'Pensiunea X',
-          img: Portfolio1,
-          desc: 'ceva4 rvdfvxgved v ceva',
-          link: '/portfolio-3'
-        }
       ]
       return (
         <>

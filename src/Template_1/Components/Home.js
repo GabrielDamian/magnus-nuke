@@ -21,43 +21,41 @@ import Opt6 from '../Media/options/6.png';
 const Home = ()=>{
     const Rooms = [
         {
-            name: 'Single Room',
+            name: 'Camera Single',
             price: '150 RON',
             desc: "Lorem Ipsuorhe industry's standarrhe industry's standard dummy text ever since the 15",
             img: Room1
         },
         {
-            name: 'Double Room',
+            name: 'Camera Dubla',
             price: '250 RON',
             desc: "Lorem Ipsum is seen th's standarry's standard dummy text ever since the 15" ,
             img: Room2            
         },
         {
-            name: 'Deluxe Double',
+            name: 'Dubla Deluxe',
             price: '350 RON',
             desc: "Lorem Ipsum isnttry's strhe industry's standarandard dummy text ever since the 15" ,
             img: Room3
         },
     ]
-
     const section3Items = [
         {
             image:Activity1,
-            title: 'Some random activity',
-            desc: "Mauris egestauris egestas, tellus sed venenatis tincidunt, odio diam iaculis augue, nec tincidunt enim odio id arcu. Ut pelleas, tellus sed venenatis tincidunt, odio diam iaculis augue, nec tincidunt enim odio id arcu. Ut pellentesque, quam ut sagittis adipiscing, lectus metus mollis magna"
+            title: 'Partia Durau',
+            desc: "Pârtia Durău este ideală pentru săniuș și schi, atât pentru începători cât și pentru avansați. Situată la poalele muntelui Ceahlău, la o altitudine de 800 m, unde stratul de zăpadă este asigurat din decembrie până în martie, pârtia are o lungime de 406 m, o lățime de minim 62 metri, o diferență de nivel de 35 metri și un grad mediu de dificultate."
         },
         {
             image:Activity2,
-            title: 'Wait, there are some more',
-            desc: "Mauris egestas, tellus sed venenatis tincidunt, odio diam iaculis augue, nec tincidunauris egestas, tellus sed venenatis tincidunt, odio diam iaculis augue, nec tincidunt enim odio id arcu. Ut pellet enim odio id arcu. Ut pellentesque, quam ut sagittis adipiscing, lectus metus mollis magna"
-        },
+            title: 'Pescuit pe Lacul Izvorul Muntelui',
+            desc: "Lacul Izvorul Muntelui (cunoscut și sub denumirea de Lacul Bicaz) este un lac de acumulare aflat pe cursul mijlociu al râului Bistrița din România, în Carpații Orientali, la 4 km în amonte față de orașul Bicaz din județul Neamț."
+         },
         {
             image:Activity3,
-            title: 'And again, even more',
-            desc: "Mauris egestas, tellus sed venenatis tincidunt, odio diam iaculis augue, nec tincidunt enim odio id arcu. Ut pellentesque, quam ut sagittis adipiscing, auris egestas, tellus sed venenatis tincidunt, odio diam iaculis augue, nec tincidunt enim odio id arcu. Ut pellelectus metus mollis magna"
+            title: 'Cascada Duruitoarea',
+            desc: "Cascada Duruitoarea, este un monument al naturii cu regim de arie protejată de interes național situată în Masivul Ceahlău. Corespunde categoriei a III-a IUCN și este situată în județul Neamț pe teritoriul administrativ al comunei Ceahlău",
         },
     ]
-
     const optionsItems = [
         {
             name:'Piscina',
@@ -94,13 +92,13 @@ const Home = ()=>{
             }}>
                 <div className='t1-section-1-top'>
                     <div className='t1-section-1-top-top'>
-                        <span>Welcome to Grandium</span>
+                        <span>Bine ai venit</span>
                     </div>
                     <div className='t1-section-1-top-center'>
-                        <span>Experience the Freedom</span>
+                        <span>Pensiune - Spa - Restaurant</span>
                     </div>
                     <div className='t1-section-1-top-bottom'>
-                        <span>- in London -</span>
+                        <span>- in Durau -</span>
                     </div>
                 </div>
                 <div className='t1-section-1-bottom'>
@@ -146,6 +144,9 @@ const Home = ()=>{
                 }
             </div>
             <div className='t1-section-3'>
+                <div className='section-3-title'>
+                    <span>Agrement</span>
+                </div>
                 {
                     section3Items.map((el,index)=>{
                         if(index %2 == 0)

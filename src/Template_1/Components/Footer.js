@@ -26,15 +26,15 @@ const Footer = ()=>{
     let icons2 = [
         {
             icon: MapIcon,
-            name: 'LONGRIDGE ROAD, EARLS COURT, LONDON'
+            name: 'Durau - Piatra Neamt'
         },
         {
             icon: PhoneIcon,
-            name: '+1-800-123-45-67'
+            name: '+40 078 998 234'
         },
         {
             icon: MailIcon,
-            name: 'INFO@THEGRANDIUMHOTEL.COM'
+            name: 'INFO@PEANSIUNEAPOAIANA.COM'
         },
     ]
     return (
@@ -42,7 +42,7 @@ const Footer = ()=>{
             <div className='t1-footer-top'>
                 <div className='t1-footer-top-name'>
                     <span style={{fontSize:'0.7rem'}}><b>SOCIAL MEDIA</b></span>
-                    <span style={{fontSize:'0.9rem'}}>FOLLOW THE GRADIUM</span>
+                    <span style={{fontSize:'0.9rem'}}>FOLLOW PENSIUNEA POIANA</span>
                 </div>
                 <div className='t1-footer-top-icons'>
                 {
