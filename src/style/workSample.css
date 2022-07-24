@@ -1,0 +1,174 @@
+.work-samples-container
+{
+    height: 90vh;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.work-sample-elem
+{
+    min-height: 350px;
+    height: 370px;
+    min-width:250px;
+    width: 270px;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.work-sample-el-title
+{
+    height: 10%;
+    width: 100%;
+}
+.work-sample-main-content
+{
+    height: 90%;
+    padding-top: 10px;
+}
+.work-sample-main-content-img
+{
+    height: 50%;
+    position: relative;
+}
+.work-sample-main-content-img img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #1e2d3d;
+}
+.black-layer-img
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.3;
+}
+.black-layer-img:hover 
+{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.work-sample-main-content-img a 
+{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+@media  screen and (max-width: 800px) {
+.work-sample-main-content-img a
+    {
+        background-color: transparent;
+    }
+
+}
+
+
+
+
+
+.work-sample-main-content-img a:hover 
+{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.work-sample-main-content-data
+{
+    height: 50%;
+    border: 2px solid #1e2d3d;
+    background-color: #001221;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 20px;
+}
+.work-sample-main-content-data-top
+{
+    height: 60%;
+    color: #607b96;
+    padding: 10px 0px;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+}
+.work-sample-main-content-data-bottom
+{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.work-sample-main-content-data-bottom button 
+{
+    background-color: #1b2b3a;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Fira Sans';
+}
+.work-sample-main-content-data-bottom button:hover 
+{
+    background-color: #37526b;
+    transition: background-color 0.4s ease; 
+    cursor: pointer;
+    
+}
+.github-img-redirect
+{
+    height: 25px;
+    width: 25px;
+}
+.github-img-redirect img
+{
+    height: 100%;
+    object-fit: contain;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+
+
+}   
+.github-img-redirect img:hover 
+{
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    transition: border 0.3s ease;
+}
+
+
+/* .work-sample-main-content-data-bottom a img 
+{
+    margin-top:6px;
+    height: 60%;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    padding: 5px 0px;
+}
+
+.work-sample-main-content-data-bottom a img:hover 
+{
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    transition: border 0.3s ease;
+} */

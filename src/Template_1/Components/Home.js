@@ -18,47 +18,89 @@ import Opt4 from '../Media/options/4.png';
 import Opt5 from '../Media/options/5.png';
 import Opt6 from '../Media/options/6.png';
 
+import {scroller} from 'react-scroll';
+import axios from 'axios';
+
 const Home = ()=>{
+    React.useEffect(()=>{
+        console.log("entry useEffect")
+        let magnusLink = 'https://api.countapi.xyz/hit/magnus-template-1.com/awesomeclick'
+        if(window.localStorage.getItem('oldTemplate') === null)
+        {
+          console.log("case 1")
+          axios.get(magnusLink)
+          .then((resp)=>{
+            window.localStorage.setItem('oldTemplate',true)
+          })
+          .catch((err)=>{
+            console.log("err")
+          })
+        }
+        else 
+        {
+          console.log("case 2:",window.localStorage.getItem('oldTemplate'))
+        }
+      })
+
+    React.useEffect(()=>{
+    
+    scroller.scrollTo('top-ref-t1', {
+        duration: 700,
+        delay: 100,
+        smooth: true,
+        offset: -100, 
+      })
+    },[])
+
     const Rooms = [
         {
-            name: 'Camera Single',
+            name: 'Cameră Single',
             price: '150 RON',
-            desc: "Lorem Ipsuorhe industry's standarrhe industry's standard dummy text ever since the 15",
+            desc: "",
             img: Room1
         },
         {
-            name: 'Camera Dubla',
+            name: 'Cameră Dublă',
             price: '250 RON',
-            desc: "Lorem Ipsum is seen th's standarry's standard dummy text ever since the 15" ,
+            desc: "",
             img: Room2            
         },
         {
-            name: 'Dubla Deluxe',
+            name: 'Dublă Deluxe',
             price: '350 RON',
-            desc: "Lorem Ipsum isnttry's strhe industry's standarandard dummy text ever since the 15" ,
+            desc: "",
             img: Room3
         },
     ]
     const section3Items = [
         {
             image:Activity1,
-            title: 'Partia Durau',
-            desc: "Pârtia Durău este ideală pentru săniuș și schi, atât pentru începători cât și pentru avansați. Situată la poalele muntelui Ceahlău, la o altitudine de 800 m, unde stratul de zăpadă este asigurat din decembrie până în martie, pârtia are o lungime de 406 m, o lățime de minim 62 metri, o diferență de nivel de 35 metri și un grad mediu de dificultate."
+            title: 'Partia Durău',
+            frame:  <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10884.864296671865!2d25.918553492799795!3d46.99673015496876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47355596834592e5%3A0x525c68c214a9c7b9!2sPartia%20Durau%20-%20Durau%20Park!5e0!3m2!1sro!2sro!4v1658668568870!5m2!1sro!2sro" 
+            width="100%" 
+            height="100%" 
+            // style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            >
+        </iframe>    
         },
         {
             image:Activity2,
-            title: 'Pescuit pe Lacul Izvorul Muntelui',
-            desc: "Lacul Izvorul Muntelui (cunoscut și sub denumirea de Lacul Bicaz) este un lac de acumulare aflat pe cursul mijlociu al râului Bistrița din România, în Carpații Orientali, la 4 km în amonte față de orașul Bicaz din județul Neamț."
+            title: 'Lacul Izvorul Muntelui (Bicaz)',
+            frame: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43525.1044311476!2d26.037288724664357!3d47.014342542236406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47355e4a41ebda19%3A0xe2df506fe5222caf!2sLacul%20Bicaz!5e0!3m2!1sro!2sro!4v1658669687487!5m2!1sro!2sro" width="100%" height="100%"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          },
         {
             image:Activity3,
             title: 'Cascada Duruitoarea',
-            desc: "Cascada Duruitoarea, este un monument al naturii cu regim de arie protejată de interes național situată în Masivul Ceahlău. Corespunde categoriei a III-a IUCN și este situată în județul Neamț pe teritoriul administrativ al comunei Ceahlău",
+            frame: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36630.328632510515!2d25.91879687489409!3d46.970227064881165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474a9fbb0e5b2d49%3A0xfe0fda9e8f870706!2sCascada%20Duruitoarea!5e0!3m2!1sro!2sro!4v1658669742722!5m2!1sro!2sro" width="100%" height="100%"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         },
     ]
     const optionsItems = [
         {
-            name:'Piscina',
+            name:'Piscină',
             icon: Opt1
         },
         {
@@ -83,7 +125,7 @@ const Home = ()=>{
         },
     ]
     return(
-        <div className='t1-home-container' >
+        <div className='t1-home-container' name='top-ref-t1'>
             <AppBar />
             <div className='t1-section-1' style={{
                 backgroundImage: `url(${IntroBg})`,
@@ -98,7 +140,7 @@ const Home = ()=>{
                         <span>Pensiune - Spa - Restaurant</span>
                     </div>
                     <div className='t1-section-1-top-bottom'>
-                        <span>- in Durau -</span>
+                        <span>- in Durău -</span>
                     </div>
                 </div>
                 <div className='t1-section-1-bottom'>
@@ -106,12 +148,12 @@ const Home = ()=>{
                         <input type='date' placeholder='ceva'/>
                         <input type='date' placeholder='ceva'/>
                         <select type='select' placeholder='ceva'>
-                            <option value="Adults">Adults</option>
+                            <option value="Adults">Adulți</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
                         <select type='select' placeholder='ceva'>
-                            <option value="Childrens">Childrens</option>
+                            <option value="Childrens">Copii</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
@@ -143,50 +185,9 @@ const Home = ()=>{
                     })
                 }
             </div>
-            <div className='t1-section-3'>
-                <div className='section-3-title'>
-                    <span>Agrement</span>
-                </div>
-                {
-                    section3Items.map((el,index)=>{
-                        if(index %2 == 0)
-                        {
-                            return(
-                            <div className='t1-section-3-item'>
-                                <div className='t1-section-3-left'>
-                                    <img src={el.image} alt='activity'/>
-                                </div>
-                                <div className='t1-setion-3-right'>
-                                    <div className='t1-section-3-right-top'>
-                                        <span>{el.title}</span>
-                                    </div>
-                                    <div className='t1-section-3-right-bottom'>
-                                        <span>{el.desc}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            )
-                        }
-                        else 
-                        {
-                            return(
-                                <div className='t1-section-3-item'>
-                                    <div className='t1-setion-3-right'>
-                                        <div className='t1-section-3-right-top'>
-                                            <span>{el.title}</span>
-                                        </div>
-                                        <div className='t1-section-3-right-bottom'>
-                                            <span>{el.desc}</span>
-                                        </div>
-                                    </div>
-                                    <div className='t1-section-3-left'>
-                                        <img src={el.image} alt='activity'/>
-                                    </div>
-                                </div>
-                                )    
-                        }
-                    })
-                }
+            
+            <div className='section-3-title'>
+                    <span>Dotări</span>
             </div>
             <div className='t1-section-4'>
                 {
@@ -201,6 +202,37 @@ const Home = ()=>{
                                 </div>
                             </div>
                         )
+                    })
+                }
+            </div>
+
+            <div className='section-3-title'>
+                <span>Obiective in apropiere</span>
+            </div>
+           
+
+            <div className='t1-section-3'>
+                
+                {
+                    section3Items.map((el,index)=>{
+                        
+                            return(
+                                <div className='t1-section-3-item'>
+                                    <div className='t1-sec-3-top' >
+                                        <span>{el.title}</span>
+                                    </div>
+                                    <div className='t1-sec-3-bot' >
+                                        <div className='t1-section-3-left'>
+                                            <img src={el.image} alt='activity'/>
+                                        </div>
+                                        <div className='t1-setion-3-right'>
+                                           {el.frame}
+                                        </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                                )    
                     })
                 }
             </div>

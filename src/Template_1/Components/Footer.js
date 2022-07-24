@@ -26,7 +26,7 @@ const Footer = ()=>{
     let icons2 = [
         {
             icon: MapIcon,
-            name: 'Durau - Piatra Neamt'
+            name: 'Durău - Piatra Neamț'
         },
         {
             icon: PhoneIcon,
@@ -42,7 +42,7 @@ const Footer = ()=>{
             <div className='t1-footer-top'>
                 <div className='t1-footer-top-name'>
                     <span style={{fontSize:'0.7rem'}}><b>SOCIAL MEDIA</b></span>
-                    <span style={{fontSize:'0.9rem'}}>FOLLOW PENSIUNEA POIANA</span>
+                    <span style={{fontSize:'0.9rem'}}>URMĂREȘTE PENSIUNEA POIANA</span>
                 </div>
                 <div className='t1-footer-top-icons'>
                 {
@@ -60,7 +60,7 @@ const Footer = ()=>{
                 </div>
                 <div className='t1-footer-bottom-bottom'>
                     <div className='t1-footer-bottom-bottom-copy'>
-                        <span>COPYRIGHT © THE GRANDIUM HOTEL</span>
+                        <span>COPYRIGHT © PENSIUNEA POIANA</span>
                     </div>
                     <div className='t1-footer-bottom-bottom-data'>
                     {

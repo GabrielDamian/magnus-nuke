@@ -4,25 +4,25 @@ import LogoIcon from '../Media/icons/logo.png';
 const AppBar = ()=>{
     const Items1 = [
         {
-            name: 'HOME',
+            name: 'ACASA',
             link: '/'
         },
         {
-            name: 'ABOUT US',
+            name: 'DESPRE NOI',
             link: '/'
         },
         {
-            name: 'ROOMS',
+            name: 'CAMERE',
             link: '/'
         },
         {
-            name: 'SERVICES',
+            name: 'SERVICII',
             link: '/'
         },
     ]
 const Items2 = [
     {
-        name: 'GALLERY',
+        name: 'GALERIE',
         link: '/'
     },
     {

@@ -10,37 +10,53 @@ import Portfolio_1_bg  from './media/portfolio/1_bg.png';
 import PortfolioProject from './PortfolioProject';
 import Template_1 from './Template_1/Components/Home';
 
+
+import Demo_1_car from './media/portfolio/1_bg.png';
+import Demo_2_car from './media/portfolio/2_bg.png';
+import Demo_3_car from './media/portfolio/3_bg.png';
+import Demo_4_car from './media/portfolio/4_bg.png';
+import Demo_5_car from './media/portfolio/5_bg.png';
+import React from 'react';
+
+import axios from 'axios';
+import Visitors from './Visitors';
+
 function App() {
  
   const PortfolioData = [
     {
       title: 'demo 1',
       imageHeader: Portfolio_1_bg,
-      client: 'no',
-      descriere: 'blasdasdasdwdfw ddwd dwd sdfswdfw ddwd dwd sdfswdfw ddwd wdfw ddwd dwd sdfswdfw ddwd dwd sdfswdfw ddwd wdfw ddwd dwd sdfswdfw ddwd dwd sdfswdfw ddwd wdfw ddwd dwd sdfswdfw ddwd dwd sdfswdfw ddwd dwd sdfswdfw ddwd dwd sdfswdfw ddwd dwd sdfs',
+      client: 'Demo Template',
+      descriere: 'Demo Website',
       tehnologii: ['React', 'NodeJs', 'MongoDb', 'Material Ui'],
-      live: '/',
-      route: '/portfolio-1'
+      live: '/template-1',
+      route: '/portfolio-1',
+      bg_imgs: [Demo_1_car,Demo_2_car,Demo_3_car,Demo_4_car,Demo_5_car]
     },
-    {
-      title: 'demo 2',
-      imageHeader: Portfolio_1_bg,
-      client: 'no',
-      descriere: 'blasdasdasdwdfw ddwd dwd sdfs',
-      tehnologii: ['React', 'NodeJs', 'MongoDb', 'Material Ui'],
-      live: '/',
-      route: '/portfolio-2'
-    },
-    {
-      title: 'demo 3',
-      imageHeader: Portfolio_1_bg,
-      client: 'no',
-      descriere: 'blasdasdasdwdfw ddwd dwd sdfs',
-      tehnologii: ['React', 'NodeJs', 'MongoDb', 'Material Ui'],
-      live: '/',
-      route: '/portfolio-3'
-    }
   ]
+
+  React.useEffect(()=>{
+    console.log("entry useEffect")
+    let magnusLink = 'https://api.countapi.xyz/hit/magnus-team.com/awesomeclick'
+    if(window.localStorage.getItem('oldVisitor') === null)
+    {
+      console.log("case 1")
+      axios.get(magnusLink)
+      .then((resp)=>{
+        window.localStorage.setItem('oldVisitor',true)
+      })
+      .catch((err)=>{
+        console.log("err")
+      })
+    }
+    else 
+    {
+      console.log("case 2:",window.localStorage.getItem('oldVisitor'))
+    }
+  })
+
+
   return(
     <BrowserRouter>
       <Routes>
@@ -58,6 +74,7 @@ function App() {
             })
           }
           <Route path="/template-1" element={<Template_1/>}/>
+          <Route path="/x" element={<Visitors />}/>
       </Routes>
     </BrowserRouter>
   )

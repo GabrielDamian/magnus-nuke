@@ -12,17 +12,17 @@ const Contact = ()=>{
         {
             icon: PhoneIcon,
             title:'Apeleaza-ne',
-            content:'+40 243 234 232'
+            content:'+40 701 171 767'
         },
         {
             icon: EmailIcon,
             title:'e-Mail',
-            content:'ceva@gmail.com'
+            content:'magnus.team.info@gmail.com'
         },
         {
             icon: MapIcon,
             title:'Locatie',
-            content:'Str Rapciugoasa. Nr 12'
+            content:'Bulevardul Tudor Vladimirescu 109-111, Iasi 700650'
         },
         
     ]

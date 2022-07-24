@@ -26,11 +26,11 @@ const Footer = ()=>{
             <div className='footer-right-column'>
               <div className='footer-right-column-item'>
                 <img src={PhoneIcon}/>
-                <span>+40 (344) 345 345</span>
+                <span>+40 701 171 767</span>
               </div>
               <div className='footer-right-column-item'>
                 <img src={EmailIcon}/>
-                <span>costelCostelus@gmail.com</span>
+                <span>magnus.team.info@gmail.com</span>
               </div>
               
             </div>

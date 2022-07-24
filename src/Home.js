@@ -248,9 +248,9 @@ const Home  = ()=>{
       ]
       const PortfolioItems = [
         {
-          title:'Pensiunea X',
+          title:'Pensiunea Poiana',
           img: Portfolio1,
-          desc: 'cevasd23d2 d23d 2da ceva',
+          desc: 'Demo Website',
           link: '/portfolio-1'
         },
       ]
