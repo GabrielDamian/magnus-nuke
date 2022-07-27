@@ -40,6 +40,32 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+    animation: logo-intro-fade 1.5s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes logo-intro-fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes menu-from-left {
+    from{
+        transform: translateX(-100);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes menu-from-right {
+    from{
+        transform: translateX(100);
+    }
+    to{
+        transform: translateX(0);
+    }
 }
 
 @media screen and (max-width: 750px) {

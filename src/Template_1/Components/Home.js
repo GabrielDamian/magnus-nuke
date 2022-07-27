@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import AppBar from './AppBar';
 import Footer from './Footer';
 import '../Styles/Home.css';
@@ -20,9 +20,12 @@ import Opt6 from '../Media/options/6.png';
 
 import {scroller} from 'react-scroll';
 import axios from 'axios';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Home = ()=>{
-    React.useEffect(()=>{
+    //click counter
+    useEffect(()=>{
         console.log("entry useEffect")
         let magnusLink = 'https://api.countapi.xyz/hit/magnus-template-1.com/awesomeclick'
         if(window.localStorage.getItem('oldTemplate') === null)
@@ -40,10 +43,9 @@ const Home = ()=>{
         {
           console.log("case 2:",window.localStorage.getItem('oldTemplate'))
         }
-      })
-
-    React.useEffect(()=>{
+    })
     
+    useEffect(()=>{
     scroller.scrollTo('top-ref-t1', {
         duration: 700,
         delay: 100,
@@ -56,22 +58,40 @@ const Home = ()=>{
         {
             name: 'Cameră Single',
             price: '150 RON',
-            desc: "",
+            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.  1500s",
             img: Room1
         },
         {
             name: 'Cameră Dublă',
             price: '250 RON',
-            desc: "",
+            desc: "Lorem Ipsum is simply dummy text of the printing and typesettinghas bes",
             img: Room2            
         },
         {
             name: 'Dublă Deluxe',
             price: '350 RON',
-            desc: "",
+            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting indnnce the 1500s",
             img: Room3
         },
     ]
+    const widget_1_section_3 = [
+        {
+            title:'Partia Durău',
+            desc: 'rem Ipsum is simpl i',
+            image: Activity1
+        },
+        {
+            title:'Partia Durău',
+            desc: 'rem Ipsum is simply  the i',
+            image: Activity1
+        },
+        {
+            title:'Partia Durău',
+            desc: 'rem Ipsum is simpthe i',
+            image: Activity1
+        },
+    ]
+    const widget_2_section_3 = []
     const section3Items = [
         {
             image:Activity1,
@@ -143,6 +163,7 @@ const Home = ()=>{
                         <span>- in Durău -</span>
                     </div>
                 </div>
+
                 <div className='t1-section-1-bottom'>
                     <div className='t1-section-1-bottom-center'>
                         <input type='date' placeholder='ceva'/>
@@ -209,11 +230,10 @@ const Home = ()=>{
             <div className='section-3-title'>
                 <span>Obiective in apropiere</span>
             </div>
-           
-
             <div className='t1-section-3'>
-                
-                {
+                <WidgetsSection3 direction="left" elements={widget_1_section_3}/>
+                {/* <WidgetsSection3 direction="right" elements={widget_1_section_3}/> */}
+                {/* {
                     section3Items.map((el,index)=>{
                         
                             return(
@@ -234,11 +254,121 @@ const Home = ()=>{
                                 </div>
                                 )    
                     })
-                }
+                } */}
+
             </div>
             <Footer />
         </div>
     )
 }
 
+const WidgetsSection3 = ({direction,elements})=>{
+    //data = [{},{},{}]
+
+    useEffect(()=>{
+        console.log("data:",elements)
+    })
+    return(
+        <div className='widget-section-3-container'>
+            {
+                direction == 'left'?
+                <>
+                  <div className='widget-3-first-container'>
+                    <div className='widget-3-first-image'>
+                        <img src={elements[0]["image"]} alt="option"/>
+                    </div>
+                    <div className='widget-3-first-text'>
+                        <div className='widget-3-first-text-header'>
+                            <span>{elements[0]["title"]}</span>
+                        </div>
+                        <div className='widget-3-first-text-body'>
+                            <span>{elements[0]["desc"]}</span>
+                        </div>
+                    </div>
+                </div>
+            <div className='widget-3-second-container'>
+                {
+                    elements.map((el,index)=>{
+                        if(index === 0 )
+                        {
+                            return null
+                        }
+                        else 
+                        {
+                            return(
+                                <div className='widget-3-second-universal'>
+                                    <div className='widget-3-second-univ-left'>
+                                        <img src={el["image"]} alt="option"/>
+                                    </div>
+                                    <div className='widget-3-second-univ-right'>
+                                        <div className='widget-3-second-univ-right-top'>
+                                            <span>
+                                                {el.title}
+                                            </span>
+                                        </div>
+                                        <div className='widget-3-second-univ-right-bottom'>
+                                            <span>
+                                                {el.desc}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    })
+                }
+            </div>
+                </>
+            :
+            <>
+            <div className='widget-3-second-container'>
+                {
+                    elements.map((el,index)=>{
+                        if(index === elements.length-1 )
+                        {
+                            return null
+                        }
+                        else 
+                        {
+                            return(
+                                <div className='widget-3-second-universal'>
+                                    <div className='widget-3-second-univ-left'>
+                                        <img src={el["image"]} alt="option"/>
+                                    </div>
+                                    <div className='widget-3-second-univ-right'>
+                                        <div className='widget-3-second-univ-right-top'>
+                                            <span>
+                                                {el.title}
+                                            </span>
+                                        </div>
+                                        <div className='widget-3-second-univ-right-bottom'>
+                                            <span>
+                                                {el.desc}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    })
+                }
+            </div>
+            <div className='widget-3-first-container'>
+                    <div className='widget-3-first-image'>
+                        <img src={elements[0]["image"]} alt="option"/>
+                    </div>
+                    <div className='widget-3-first-text'>
+                        <div className='widget-3-first-text-header'>
+                            <span>{elements[0]["title"]}</span>
+                        </div>
+                        <div className='widget-3-first-text-body'>
+                            <span>{elements[0]["desc"]}</span>
+                        </div>
+                    </div>
+                </div>
+            </>
+            }
+        </div>
+    )
+}
 export default Home;

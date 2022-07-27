@@ -40,7 +40,14 @@ const Items2 = [
     ]
     return (
         <div className='t1-appbar-container'>
-            <div className='t1-appbar-items-row'>
+            <div 
+                className='t1-appbar-items-row'
+                style={{
+                    animation: 'menu-from-left 1.5s ease',
+                    animationFillMode: 'forwards',
+                    transform: 'translateX(-100%)'
+                }}
+            >
             {
                 Items1.map((el)=>{
                     return(
@@ -52,7 +59,14 @@ const Items2 = [
             <div className='t1-appbar-logo-container'>
                 <img src={LogoIcon} alt='logo'/>
             </div>
-            <div className='t1-appbar-items-row'>
+            <div 
+                className='t1-appbar-items-row'
+                style={{
+                    animation: 'menu-from-right 1.5s ease',
+                    animationFillMode: 'forwards',
+                    transform: 'translateX(100%)'
+                }}
+            >
                 {
                     Items2.map((el)=>{
                         return(
