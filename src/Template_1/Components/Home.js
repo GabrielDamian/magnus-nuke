@@ -23,6 +23,16 @@ import axios from 'axios';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import Box from '@mui/material/Box';
+import Tab from '@material-ui/core/Tab';
+import TabContext from '@material-ui/lab/TabContext';
+import TabList from '@material-ui/lab/TabList';
+import TabPanel from '@material-ui/lab/TabPanel';
+
+
+
+import ImageSlider from './ImageSlider';
+
 const Home = ()=>{
     //click counter
     useEffect(()=>{
@@ -76,19 +86,19 @@ const Home = ()=>{
     ]
     const widget_1_section_3 = [
         {
-            title:'Partia Durău',
+            title:'Parcul National Calimani',
             desc: 'rem Ipsum is simpl i',
-            image: Activity1
+            image: Activity2
         },
         {
-            title:'Partia Durău',
+            title:'Partia Dealul Negru',
             desc: 'rem Ipsum is simply  the i',
             image: Activity1
         },
         {
-            title:'Partia Durău',
+            title:'Agrement ',
             desc: 'rem Ipsum is simpthe i',
-            image: Activity1
+            image: Activity3
         },
     ]
     const widget_2_section_3 = []
@@ -144,6 +154,14 @@ const Home = ()=>{
             icon: Opt6
         },
     ]
+
+    //TABS SECTION 5
+    const [value, setValue] = React.useState('1');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+    
     return(
         <div className='t1-home-container' name='top-ref-t1'>
             <AppBar />
@@ -157,14 +175,14 @@ const Home = ()=>{
                         <span>Bine ai venit</span>
                     </div>
                     <div className='t1-section-1-top-center'>
-                        <span>Pensiune - Spa - Restaurant</span>
+                        <span>Pensiune</span>
                     </div>
                     <div className='t1-section-1-top-bottom'>
-                        <span>- in Durău -</span>
+                        <span>- in Vatra Dornei -</span>
                     </div>
                 </div>
 
-                <div className='t1-section-1-bottom'>
+                {/* <div className='t1-section-1-bottom'>
                     <div className='t1-section-1-bottom-center'>
                         <input type='date' placeholder='ceva'/>
                         <input type='date' placeholder='ceva'/>
@@ -182,7 +200,7 @@ const Home = ()=>{
                             BOOK NOW
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className='t1-section-2'>
                 {
@@ -255,7 +273,23 @@ const Home = ()=>{
                                 )    
                     })
                 } */}
-
+            </div>
+            <div className='t1-section-5'>
+            {/* <Box sx={{ width: '100%', typography: 'body1',padding: '20px' }}>
+                <TabContext value={value}>
+                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <TabList onChange={handleChange} aria-label="lab API tabs example">
+                        <Tab icon={<BedIcon />} label="CAMERE" />
+                        <Tab icon={<CountertopsIcon />} label="BUCATARIE" />
+                        <Tab icon={<PoolIcon />} label="PISCINA" />
+                    </TabList>
+                    </Box>
+                    <TabPanel value="1">Item One</TabPanel>
+                    <TabPanel value="2">Item Two</TabPanel>
+                    <TabPanel value="3">Item Three</TabPanel>
+                </TabContext>
+            </Box> */}
+            <ImageSlider/>
             </div>
             <Footer />
         </div>
@@ -372,3 +406,4 @@ const WidgetsSection3 = ({direction,elements})=>{
     )
 }
 export default Home;
+

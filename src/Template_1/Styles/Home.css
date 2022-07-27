@@ -153,8 +153,12 @@
     box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2);
     padding-bottom: 30px;
     opacity: 0;
-    animation: show-rooms-anim-ref 2s ease; 
+    animation: show-rooms-anim-ref 2s ease, all 0.5s ease; 
     animation-fill-mode: forwards;
+}
+.t1-room-item-container:hover 
+{
+    cursor: pointer;
 }
 .t1-room-item-img
 {
@@ -226,7 +230,11 @@
 {
     cursor: pointer;
 }
-
+.widget-3-first-container:hover .widget-3-first-text-header span
+{
+    border-bottom: 2px solid #db876d;
+    transition: all 0.5s ease;
+}
 .widget-3-second-container
 {
     height: 100%;
@@ -264,6 +272,10 @@
     justify-content: flex-start;
     align-items: center;
 }
+.widget-3-first-text-header span 
+{
+    border-bottom: 2px solid transparent;
+}
 .widget-3-first-text-body
 {
     height: 60%;
@@ -283,6 +295,11 @@
 .widget-3-second-universal:hover 
 {
     cursor: pointer;
+}
+.widget-3-second-universal:hover .widget-3-second-univ-right-top span 
+{
+    border-bottom: 2px solid #db876d;
+    transition: all 0.5s ease;
 }
 .widget-3-second-univ-left
 {
@@ -314,6 +331,10 @@
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
+}
+.widget-3-second-univ-right-top span 
+{
+    border-bottom: 2px solid transparent;
 }
 .widget-3-second-univ-right-bottom
 {
@@ -376,6 +397,11 @@
     align-items: center;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+}
+/* SECTION 5 */
+.t1-section-5
+{
+    height:auto;
 }
 
 @media screen and (max-width: 750px) {
@@ -504,5 +530,14 @@
     {
         flex-wrap: wrap;
     }
+}
 
+/* mui */
+.css-aym9vq-MuiButtonBase-root-MuiTab-root.Mui-selected
+{
+    color:#db876d !important;
+}
+.css-1aquho2-MuiTabs-indicator
+{
+    background-color:#d64518 !important;
 }
