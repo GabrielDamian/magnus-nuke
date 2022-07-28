@@ -21,6 +21,11 @@ import React from 'react';
 import axios from 'axios';
 import Visitors from './Visitors';
 
+import AboutUs from './Template_1/Components/AboutUs';
+import CamerePage from './Template_1/Components/CamerePage';
+import ContactPage from './Template_1/Components/Contact';
+import AgrementComponent from './Template_1/Components/AgrementComponent';
+
 function App() {
  
   const PortfolioData = [
@@ -73,7 +78,16 @@ function App() {
               )
             })
           }
+          {/* Pensiunea Laricea */}
           <Route path="/template-1" element={<Template_1/>}/>
+          <Route path="/template-1/despre" element={<AboutUs/>}/>
+          <Route path="/template-1/camere" element={<CamerePage/>}/>
+          <Route path="/template-1/contact" element={<ContactPage/>}/>
+          
+          <Route path="/template-1/parcul-calimani" element={<AgrementComponent indexPointer={0}/>}/>
+          <Route path="/template-1/partia-dealul-negru" element={<AgrementComponent indexPointer={1}/>}/>
+          
+          {/*Statistici*/}
           <Route path="/x" element={<Visitors />}/>
       </Routes>
     </BrowserRouter>

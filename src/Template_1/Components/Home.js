@@ -3,9 +3,6 @@ import AppBar from './AppBar';
 import Footer from './Footer';
 import '../Styles/Home.css';
 import IntroBg from '../Media/bg/intro-bg.png';
-import Room1 from '../Media/rooms/room_1.jpg';
-import Room2 from '../Media/rooms/room_2.jpg';
-import Room3 from '../Media/rooms/room_3.jpg';
 
 import Activity1 from '../Media/activities/1.jpg';
 import Activity2 from '../Media/activities/2.jpg';
@@ -20,16 +17,9 @@ import Opt6 from '../Media/options/6.png';
 
 import {scroller} from 'react-scroll';
 import axios from 'axios';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
-import Box from '@mui/material/Box';
-import Tab from '@material-ui/core/Tab';
-import TabContext from '@material-ui/lab/TabContext';
-import TabList from '@material-ui/lab/TabList';
-import TabPanel from '@material-ui/lab/TabPanel';
-
-
+import MapIcon from '../Media/icons/map.png';
+import PhoneIcon from '../Media/icons/phone-call.png';
 
 import ImageSlider from './ImageSlider';
 
@@ -64,40 +54,20 @@ const Home = ()=>{
       })
     },[])
 
-    const Rooms = [
-        {
-            name: 'Cameră Single',
-            price: '150 RON',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.  1500s",
-            img: Room1
-        },
-        {
-            name: 'Cameră Dublă',
-            price: '250 RON',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesettinghas bes",
-            img: Room2            
-        },
-        {
-            name: 'Dublă Deluxe',
-            price: '350 RON',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting indnnce the 1500s",
-            img: Room3
-        },
-    ]
     const widget_1_section_3 = [
         {
             title:'Parcul National Calimani',
-            desc: 'rem Ipsum is simpl i',
+            desc: `Parcul Național Călimani se întinde pe teritoriul a patru județe (Mureș, Suceava, Harghita și Bistrița-Năsăud) și este o zonă specială de conservare.`, 
             image: Activity2
         },
         {
             title:'Partia Dealul Negru',
-            desc: 'rem Ipsum is simply  the i',
+            desc: 'Pârtia de schi Dealul Negru are un grad de dificultate mediu şi lungimea de 3000 metri. Altitudinea la plecare este de 1250 metri şi la sosire de 850 m, diferenţa de nivel fiind de 400 m.',
             image: Activity1
         },
         {
             title:'Agrement ',
-            desc: 'rem Ipsum is simpthe i',
+            desc: 'Agrement in Vatra Dornei si zonele apropiate. Posibilitati de petrecere a timpului liber, modalitati de relaxare sau activitati de turism activ.',
             image: Activity3
         },
     ]
@@ -130,23 +100,23 @@ const Home = ()=>{
     ]
     const optionsItems = [
         {
-            name:'Piscină',
-            icon: Opt1
-        },
-        {
             name:'Camere duble',
             icon: Opt2
         },
         {
-            name:'Teren de fotbal',
+            name:'Parcare gratuita',
+            icon: Opt1
+        },
+        {
+            name:'Accepta animale de companie',
             icon: Opt3
         },
         {
-            name:'Teren de tenis',
+            name:'Bar',
             icon: Opt4
         },
         {
-            name:'Biliard',
+            name:'Echitatie',
             icon: Opt5
         },
         {
@@ -162,6 +132,8 @@ const Home = ()=>{
         setValue(newValue);
     };
     
+    let bgIntro ="https://drive.google.com/uc?id=1zlL-EhlRPNQhbRE2se5Z76PYhga1Z-Vl"
+
     return(
         <div className='t1-home-container' name='top-ref-t1'>
             <AppBar />
@@ -202,7 +174,7 @@ const Home = ()=>{
                     </div>
                 </div> */}
             </div>
-            <div className='t1-section-2'>
+            {/* <div className='t1-section-2'>
                 {
                     Rooms.map((el)=>{
                         return(
@@ -223,6 +195,49 @@ const Home = ()=>{
                         )
                     })
                 }
+            </div> */}
+            <div className='t1-section-0'>
+                <div className='t1-setcion-0-left'>
+                    <div className='t1-setcion-0-left-top'>
+                        <span><b>Pensiunea Laricea, in Vatra Dornei</b></span>
+                    </div>
+                    <div className='t1-setcion-0-left-bot'>
+                        <span>Cauți o locație primitoare, pentru o vacanta, mini-vacanta plina de relaxare, obiective turistice care merita vizitate și reconectare cu natura? Pensiunea Laricea este locația ideala! Pensiunea dispune de patru camere spațioase și luminoase cu capacitate de opt persoane fiecare cameră cu baie proprie și balcon, bucătărie complet utilată cu loc de luat masa, curte spațioasă, locuri de parcare, loc de joaca pentru copii, grătar cu cărbune și ciubăr.</span>
+                    </div>
+                </div>
+                <div className='t1-setcion-0-right'>
+                    <div className='t1-setcion-0-right-left'>
+                        <div className='t1-setcion-0-right-left-top'>
+                                <div className='t1-setcion-0-right-left-icon-container-icon'>
+                                    <img src={MapIcon}/>
+                                    <span>Locatie</span>
+                                </div>
+                                <div className='t1-setcion-0-right-left-icon-container-data'>
+                                <span>Vatra Dornei, Comuna Panaci</span>
+                                </div>
+                        </div>
+                        <div className='t1-setcion-0-right-left-top'>
+                                <div className='t1-setcion-0-right-left-icon-container-icon'>
+                                    <img src={PhoneIcon}/>
+                                    <span>Contact</span>
+                                </div>
+                                <div className='t1-setcion-0-right-left-icon-container-data'>
+                                    <p style={{display:'block'}}> +40 073 300 6550</p>
+                                    <p style={{display:'block'}}> +40 073 300 6550</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div className='t1-setcion-0-right-right'>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37500.68340867107!2d25.352079118561534!3d47.25751691286002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47358f5ee472d239%3A0xb1223f946fe1c41c!2sPensiunea%20Laricea!5e0!3m2!1sro!2sro!4v1659002489020!5m2!1sro!2sro" 
+                        width="100%" 
+                        height="100%" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        style={{outline:'none', border:'none'}}
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
             
             <div className='section-3-title'>
@@ -245,6 +260,24 @@ const Home = ()=>{
                 }
             </div>
 
+           
+            <div className='t1-section-5'>
+            {/* <Box sx={{ width: '100%', typography: 'body1',padding: '20px' }}>
+                <TabContext value={value}>
+                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                    <TabList onChange={handleChange} aria-label="lab API tabs example">
+                        <Tab icon={<BedIcon />} label="CAMERE" />
+                        <Tab icon={<CountertopsIcon />} label="BUCATARIE" />
+                        <Tab icon={<PoolIcon />} label="PISCINA" />
+                    </TabList>
+                    </Box>
+                    <TabPanel value="1">Item One</TabPanel>
+                    <TabPanel value="2">Item Two</TabPanel>
+                    <TabPanel value="3">Item Three</TabPanel>
+                </TabContext>
+            </Box> */}
+            <ImageSlider/>
+            </div>
             <div className='section-3-title'>
                 <span>Obiective in apropiere</span>
             </div>
@@ -274,23 +307,6 @@ const Home = ()=>{
                     })
                 } */}
             </div>
-            <div className='t1-section-5'>
-            {/* <Box sx={{ width: '100%', typography: 'body1',padding: '20px' }}>
-                <TabContext value={value}>
-                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList onChange={handleChange} aria-label="lab API tabs example">
-                        <Tab icon={<BedIcon />} label="CAMERE" />
-                        <Tab icon={<CountertopsIcon />} label="BUCATARIE" />
-                        <Tab icon={<PoolIcon />} label="PISCINA" />
-                    </TabList>
-                    </Box>
-                    <TabPanel value="1">Item One</TabPanel>
-                    <TabPanel value="2">Item Two</TabPanel>
-                    <TabPanel value="3">Item Three</TabPanel>
-                </TabContext>
-            </Box> */}
-            <ImageSlider/>
-            </div>
             <Footer />
         </div>
     )
@@ -302,6 +318,20 @@ const WidgetsSection3 = ({direction,elements})=>{
     useEffect(()=>{
         console.log("data:",elements)
     })
+    const shrinkText = (text)=>{
+        console.log(window.innerWidth)
+        if(window.innerWidth < 1000)
+        {
+            if(text.length > 30)
+            {
+                return `${text.slice(0,30)}...`
+            }
+        }
+        else 
+        {
+            return text
+        }
+    }
     return(
         <div className='widget-section-3-container'>
             {
@@ -316,7 +346,8 @@ const WidgetsSection3 = ({direction,elements})=>{
                             <span>{elements[0]["title"]}</span>
                         </div>
                         <div className='widget-3-first-text-body'>
-                            <span>{elements[0]["desc"]}</span>
+                            <span>{shrinkText(elements[0]["desc"])}</span>
+                            {/* <span>{elements[0]["desc"]}</span> */}
                         </div>
                     </div>
                 </div>
@@ -341,9 +372,7 @@ const WidgetsSection3 = ({direction,elements})=>{
                                             </span>
                                         </div>
                                         <div className='widget-3-second-univ-right-bottom'>
-                                            <span>
-                                                {el.desc}
-                                            </span>
+                                            <span>{shrinkText(el.desc)}</span>
                                         </div>
                                     </div>
                                 </div>

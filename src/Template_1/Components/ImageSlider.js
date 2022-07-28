@@ -11,7 +11,6 @@ import PoolIcon from '@mui/icons-material/Pool';
 import BedIcon from '@mui/icons-material/Bed';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
-import TestImage from '../Media/bg/test.png';
 import ForestIcon from '@mui/icons-material/Forest';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';

@@ -1,0 +1,118 @@
+.t1-section-camere-container
+{
+    padding: 5%;
+    font-family: 'Poppins', sans-serif;
+}
+.t1-section-camere-top
+{
+    padding: 20px;
+    display: flex;
+}
+.t1-section-camere-top-left
+{
+    height: 100%;
+    width: 50%;
+    font-size: 1.3rem;
+}
+.t1-section-camere-top-left span 
+{
+    border-bottom: 2px solid #d87a59;
+}
+.t1-section-camere-top-right
+{
+    height: 100%;
+    width: 50%;
+    font-size: 1.3rem;
+    display:flex;
+    justify-content: flex-end;
+}
+.t1-section-camere-top-right a 
+{
+    background-color: #d87a59;
+    padding: 3px 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: 1rem;
+
+}
+.
+.t1-section-camere-top-right:hover a
+{
+    color: black;
+    transition: all 0.5s ease;
+}
+.t1-section-camere-options
+{
+    height: auto;
+}
+.t1-section-camere-price
+{
+    height: 200px;
+}
+.t1-section-camere-price-top
+{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    padding: 0% 3%;
+    font-size: 1.3rem;
+}
+
+.t1-section-camere-price-bot
+{
+    height: 60%;
+    font-weight: 200;
+    padding: 2% 3%;
+}
+
+
+
+
+.t1-section-camere-options-title
+{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.t1-section-camere-options-title span 
+{
+    border-bottom: 2px solid #d87a59;
+}
+.t1-section-camere-options-content
+{
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+
+
+
+.option-camera-x
+{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.option-camera-x-icon
+{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.option-camera-x-icon img
+{
+    height: 50%;
+    width: 80%;
+    object-fit: contain;
+}
+.option-camera-x-data
+{
+    width: 75%;
+    font-size: 0.8rem;
+}

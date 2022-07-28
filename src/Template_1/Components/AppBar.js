@@ -5,37 +5,21 @@ const AppBar = ()=>{
     const Items1 = [
         {
             name: 'ACASA',
-            link: '/'
-        },
-        {
-            name: 'DESPRE NOI',
-            link: '/'
+            link: '/template-1'
         },
         {
             name: 'CAMERE',
-            link: '/'
-        },
-        {
-            name: 'SERVICII',
-            link: '/'
+            link: '/template-1/camere'
         },
     ]
 const Items2 = [
     {
-        name: 'GALERIE',
-        link: '/'
-    },
-    {
-        name: 'BOOKING',
-        link: '/'
-    },
-    {
-        name: 'BLOG',
-        link: '/'
+        name: 'DESPRE NOI',
+        link: '/template-1/despre'
     },
     {
         name: 'CONTACT',
-        link: '/'
+        link: '/template-1/contact'
     },
     ]
     return (
@@ -51,7 +35,7 @@ const Items2 = [
             {
                 Items1.map((el)=>{
                     return(
-                        <a href=''>{el.name}</a>
+                        <a href={el.link}>{el.name}</a>
                     )
                 })
             }
@@ -70,7 +54,7 @@ const Items2 = [
                 {
                     Items2.map((el)=>{
                         return(
-                            <a href=''>{el.name}</a>
+                            <a href={el.link}>{el.name}</a>
                         )
                     })
                 }

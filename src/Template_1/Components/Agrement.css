@@ -1,0 +1,34 @@
+.t1-section-agrement-container
+{
+    min-height: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+.t1-section-agrement-container-title
+{
+    padding: 3%;
+    font-size: 1.8rem;
+}
+.t1-section-agrement-container-img
+{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+.t1-section-agrement-container-img img 
+{
+    height: 100%;
+    overflow: cover;
+    border-radius: 10px;
+}
+.t1-section-agrement-container-desc
+{
+    font-weight: 200;
+    padding: 3%;
+}
+.t1-section-agrement-container-map
+{
+    height: 80vh;
+    padding: 3%;
+}

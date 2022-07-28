@@ -1,0 +1,18 @@
+.map-widget-container
+{
+    height: 400px;
+    padding: 30px;
+}
+.map-widget-container-top
+{
+    height: 20%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    
+}
+.map-widget-container-bottom
+{
+    height: 80%;
+}
