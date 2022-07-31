@@ -8,6 +8,7 @@
     font-family: 'Poppins',sans-serif;
     color: white;
     font-size: 3rem;
+    text-align: center;
 }
 .t1-section2-about
 {
@@ -43,4 +44,24 @@
     font-family:"Poppins", sans-serif;
     font-size: 1.2rem;
     font-weight: 200;
+}
+
+/* Mobile */
+@media screen and (max-width: 950px) {
+
+.t1-section2-about
+{
+    flex-direction: column;
+    height: auto;
+}
+.t1-section2-about-left
+{
+    height: 300px;
+}
+.t1-section2-about-right-bottom
+{
+    text-align: center;
+    font-size: 1rem;
+    padding: 30px 25px;
+}
 }

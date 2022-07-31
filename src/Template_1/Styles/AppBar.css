@@ -16,16 +16,23 @@
     justify-content: center;
 }
 .t1-appbar-items-row a{
-    width: 25%;
+    width: 33%;
     text-align: center;
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
     color: white;
+    background-color: #d77b5d;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px 20px;
+    text-align: center;
 }
 
 .t1-appbar-items-row a:hover{
     color: #d77b5d;
+    background-color: transparent;
     transition: all 0.2s ease;
+    border: 2px solid #d77b5d;
 }
 .t1-appbar-logo-container
 {
@@ -34,12 +41,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 2%;
 }
 .t1-appbar-logo-container img 
 {
     /* height: 100%; */
     width: 100%;
+    height: 100%;
     object-fit: contain;
     animation: logo-intro-fade 1.5s ease;
     animation-fill-mode: forwards;
@@ -68,7 +75,71 @@
         transform: translateX(0);
     }
 }
+/* Mobile menu */
+.mobile-menu
+{
+    height: 100%;
+    width: 20%;
 
+    display: none;
+}
+.mobile-menu img 
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.mobile-menu-container
+{
+    height:100vh;
+    width: 60vw;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateX(-100%);
+    z-index: 10;
+}
+.mobile-app-bar-exit{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 10px;
+}
+.mobile-app-bar-exit img{
+    height: 50%;
+}
+.mobile-app-bar-item
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-app-bar-item a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #d77b5d;
+}
+@keyframes moveMobileMenu1 {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes moveMobileMenu1 {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
 @media screen and (max-width: 750px) {
     .t1-appbar-items-row
     {
@@ -78,5 +149,10 @@
     {
         width: 100%;
         padding: 10px;
+    }
+    /* Mobile menu */
+    .mobile-menu
+    {
+        display: block;
     }
 }

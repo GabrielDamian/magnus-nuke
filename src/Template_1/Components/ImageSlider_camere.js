@@ -72,6 +72,22 @@ import Ciubar1 from '../Media/sorted/Ciubar/1.jpg';
 import Ciubar2 from '../Media/sorted/Ciubar/2.jpeg';
 import Ciubar3 from '../Media/sorted/Ciubar/3.jpeg';
 
+import Camera_1_1 from '../Media/Camere/1/1.jpg';
+import Camera_1_2 from '../Media/Camere/1/2.jpg';
+import Camera_1_3 from '../Media/Camere/1/3.jpg';
+
+import Camera_2_1 from '../Media/Camere/2/1.jpg';
+import Camera_2_2 from '../Media/Camere/2/2.jpg';
+import Camera_2_3 from '../Media/Camere/2/3.jpg';
+
+import Camera_3_1 from '../Media/Camere/3/1.jpg';
+import Camera_3_2 from '../Media/Camere/3/2.jpg';
+import Camera_3_3 from '../Media/Camere/3/3.jpg';
+
+import Camera_4_1 from '../Media/Camere/4/1.jpg';
+import Camera_4_2 from '../Media/Camere/4/2.jpg';
+import Camera_4_3 from '../Media/Camere/4/3.jpg';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -120,22 +136,25 @@ export default function ImageSlider() {
   let Imprejur = [Imprejur2,Imprejur4,Imprejur6,Imprejur7,Imprejur8,Imprejur9,Imprejur10,Imprejur11,Imprejur12,Imprejur13,Imprejur14,Imprejur15,Imprejur16,Imprejur17,Imprejur18,Imprejur19,Imprejur20,Imprejur21]
   let Ciubar = [Ciubar1,Ciubar2]
 
+  let Camera_1 = [Camera_1_1,Camera_1_2,Camera_1_3]
+  let Camera_2 = [Camera_2_1,Camera_2_2,Camera_2_3]
+  let Camera_3 = [Camera_3_1,Camera_3_2,Camera_3_3]
+  let Camera_4 = [Camera_4_1,Camera_4_2,Camera_4_3]
+
   return (
     <Box sx={{ width: '100%', padding: '30px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange}  variant="scrollable" scrollButtons="auto" aria-label="scrollable auto tabs example">
-          <Tab icon={<BedIcon />} label="Camere" {...a11yProps(0)} />
-          <Tab icon={<RestaurantMenuIcon />} label="Restaurant" {...a11yProps(1)} />
-          <Tab icon={<ForestIcon />} label="Imprejurari" {...a11yProps(2)} />
-          <Tab icon={<LocalBarIcon />} label="Bar" {...a11yProps(3)} />
-          <Tab icon={<CountertopsIcon />} label="Bucatarie" {...a11yProps(4)} />
-          <Tab icon={<WavesIcon />} label="Ciubar" {...a11yProps(5)} />
+          <Tab icon={<BedIcon />} label="Camera 1" {...a11yProps(0)} />
+          <Tab icon={<BedIcon />} label="Camera 2" {...a11yProps(1)} />
+          <Tab icon={<BedIcon />} label="Camera 3" {...a11yProps(2)} />
+          <Tab icon={<BedIcon />} label="Camera 4" {...a11yProps(3)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <Carousel width="100%">
             {
-                CamereImgs.map((el)=>{
+                Camera_1.map((el)=>{
                     return(
                         <div style={{height:'70vh', backgroundColor:'grey'}}>
                             <img src={el} style={{height: '100%',objectFit:'contain'}} />
@@ -148,7 +167,7 @@ export default function ImageSlider() {
       <TabPanel value={value} index={1}>
         <Carousel style={{height:'70vh'}}>
         {
-                RestImgs.map((el)=>{
+                Camera_2.map((el)=>{
                     return(
                         <div style={{height:'70vh', backgroundColor:'grey'}}>
                             <img src={el} style={{height: '100%',objectFit:'contain'}} />
@@ -161,7 +180,7 @@ export default function ImageSlider() {
       <TabPanel value={value} index={2}>
         <Carousel style={{height:'70vh'}}>
             {
-                    Imprejur.map((el)=>{
+                    Camera_3.map((el)=>{
                         return(
                             <div style={{height:'70vh', backgroundColor:'gray'}}>
                                 <img src={el} style={{height: '100%',objectFit:'contain'}} />
@@ -174,33 +193,7 @@ export default function ImageSlider() {
       <TabPanel value={value} index={3}>
         <Carousel style={{height:'70vh'}}>
             {
-                    BarImgs.map((el)=>{
-                        return(
-                            <div style={{height:'70vh', backgroundColor:'gray'}}>
-                                <img src={el} style={{height: '100%',objectFit:'contain'}} />
-                            </div>
-                        )
-                    })
-                }
-            </Carousel>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <Carousel style={{height:'70vh'}}>
-            {
-                    Bucatarie.map((el)=>{
-                        return(
-                            <div style={{height:'70vh', backgroundColor:'gray'}}>
-                                <img src={el} style={{height: '100%',objectFit:'contain'}} />
-                            </div>
-                        )
-                    })
-                }
-            </Carousel>
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        <Carousel style={{height:'70vh'}}>
-            {
-                    Ciubar.map((el)=>{
+                    Camera_4.map((el)=>{
                         return(
                             <div style={{height:'70vh', backgroundColor:'gray'}}>
                                 <img src={el} style={{height: '100%',objectFit:'contain'}} />

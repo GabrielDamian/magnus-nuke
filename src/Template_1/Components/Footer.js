@@ -26,11 +26,15 @@ const Footer = ()=>{
     let icons2 = [
         {
             icon: MapIcon,
-            name: 'Durău - Piatra Neamț'
+            name: 'Vatra Dornei - Piatra Neamț'
         },
         {
             icon: PhoneIcon,
-            name: '+40 078 998 234'
+            name: '+40 733 006 550'
+        },
+        {
+            icon: PhoneIcon,
+            name: '+40 733 006 551'
         },
         {
             icon: MailIcon,
@@ -39,7 +43,7 @@ const Footer = ()=>{
     ]
     return (
         <div className='t1-footer-container'>
-            <div className='t1-footer-top'>
+            {/* <div className='t1-footer-top'>
                 <div className='t1-footer-top-name'>
                     <span style={{fontSize:'0.7rem'}}><b>SOCIAL MEDIA</b></span>
                     <span style={{fontSize:'0.9rem'}}>URMĂREȘTE PENSIUNEA POIANA</span>
@@ -53,14 +57,14 @@ const Footer = ()=>{
                     })
                 }
                 </div>
-            </div>
+            </div> */}
             <div className='t1-footer-bottom'>
                 <div className='t1-footer-bottom-top'>
                     <img src={LogoIcon} alt='logo'/>
                 </div>
                 <div className='t1-footer-bottom-bottom'>
                     <div className='t1-footer-bottom-bottom-copy'>
-                        <span>COPYRIGHT © PENSIUNEA POIANA</span>
+                        <span>COPYRIGHT © PENSIUNEA LARICEA</span>
                     </div>
                     <div className='t1-footer-bottom-bottom-data'>
                     {

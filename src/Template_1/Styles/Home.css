@@ -29,6 +29,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
 }
 .t1-section-1-top-center
 {
@@ -38,11 +39,12 @@
     justify-content: center;
     align-items: center;
     font-family: 'Merriweather', serif;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     letter-spacing: 1px;
     animation: from-left-intro 1.5s ease;
     animation-fill-mode: forwards;
     transform: translateX(-100%);
+    
 }
 @keyframes from-left-intro {
     from{
@@ -199,7 +201,7 @@
     align-items: center;
     justify-content: flex-start;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-align: center;
 }
 
@@ -312,10 +314,6 @@
     -webkit-box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2); 
     box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2);
 }
-.widget-3-first-container:hover 
-{
-    cursor: pointer;
-}
 .widget-3-first-container:hover .widget-3-first-text-header span
 {
     border-bottom: 2px solid #db876d;
@@ -358,7 +356,7 @@
     justify-content: flex-start;
     align-items: center;
 }
-.widget-3-first-text-header span 
+.widget-3-first-text-header a 
 {
     border-bottom: 2px solid transparent;
 }
@@ -377,10 +375,6 @@
     display: flex;
     -webkit-box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2); 
     box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.2);
-}
-.widget-3-second-universal:hover 
-{
-    cursor: pointer;
 }
 .widget-3-second-universal:hover .widget-3-second-univ-right-top span 
 {
@@ -418,7 +412,7 @@
     display: flex;
     align-items: center;
 }
-.widget-3-second-univ-right-top span 
+.widget-3-second-univ-right-top a 
 {
     border-bottom: 2px solid transparent;
 }

@@ -4,6 +4,7 @@ import Footer from './Footer';
 
 import CalimaniImg from '../Media/activities/2.jpg';
 import PartieImg from '../Media/activities/1.jpg';
+import AgrementBg from '../Media/bg/agrement.jpg';
 
 const AgrementComponent = ({indexPointer})=>{
     const config = [
@@ -33,13 +34,13 @@ const AgrementComponent = ({indexPointer})=>{
         }
     ]
 
-    let bgIntro ="https://drive.google.com/uc?id=1zlL-EhlRPNQhbRE2se5Z76PYhga1Z-Vl"
 
     return(
         <div className='t1-home-container' name='top-ref-t1'>
             <AppBar />
             <div className='t1-section-1' style={{
-                backgroundImage: `url(${bgIntro})`,
+                backgroundImage: `url(${AgrementBg
+                })`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'top'
             }}>

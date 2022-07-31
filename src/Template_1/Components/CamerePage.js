@@ -1,7 +1,7 @@
 import AppBar from "./AppBar";
 import Footer from "./Footer";
 import './Camere.css';
-import ImageSlider from './ImageSlider';
+import ImageSlider from './ImageSlider_camere';
 
 import Opt1 from '../Media/options/1.png';
 import Opt2 from '../Media/options/2.png';
@@ -62,15 +62,16 @@ const CamerePage = ()=>{
             <div className="t1-section-camere-container">
                 <div className="t1-section-camere-top">
                     <div className="t1-section-camere-top-left">
-                        <span>Camera dubla</span>
+                        <span style={{display:"block"}}>Camera dubla</span>
+                        <span style={{display:"block", fontWeight:'200', borderBottom:'none', fontSize:'0.9rem', marginTop:'10px'}}>*dispunem de 4 astfel de camere</span>
                     </div>
                     <div className="t1-section-camere-top-right">
-                        <a href=''>Rezerva acum</a>
+                        <a href=''>Suna acum</a>
                     </div>
                 </div>
                 <div className="t1-section-camere-price">
                     <div className="t1-section-camere-price-top">
-                        <span>Pret: 150 RON/noapte</span>
+                        <span>Pret: 200 RON/noapte</span>
                     </div>
                     <div className="t1-section-camere-price-bot">
                         <span>Descriere camera</span>

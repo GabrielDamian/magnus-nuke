@@ -64,8 +64,8 @@ const ContactPage = ()=>{
                                     <span>Contact</span>
                                 </div>
                                 <div className='t1-setcion-0-right-left-icon-container-data'>
-                                    <p style={{display:'block'}}> +40 073 300 6550</p>
-                                    <p style={{display:'block'}}> +40 073 300 6550</p>
+                                    <p style={{display:'block'}}> +40 733 006 550</p>
+                                    <p style={{display:'block'}}> +40 733 006 551</p>
                                 </div>
                         </div>
                         <div className='t1-setcion-0-right-left-top'  style={{height:'33%'}}>

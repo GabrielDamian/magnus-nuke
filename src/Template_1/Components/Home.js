@@ -12,7 +12,7 @@ import Opt1 from '../Media/options/1.png';
 import Opt2 from '../Media/options/2.png';
 import Opt3 from '../Media/options/3.png';
 import Opt4 from '../Media/options/4.png';
-import Opt5 from '../Media/options/5.png';
+import Opt5 from '../Media/options/grill.png';
 import Opt6 from '../Media/options/6.png';
 
 import {scroller} from 'react-scroll';
@@ -22,8 +22,10 @@ import MapIcon from '../Media/icons/map.png';
 import PhoneIcon from '../Media/icons/phone-call.png';
 
 import ImageSlider from './ImageSlider';
+import { useNavigate } from 'react-router-dom';
 
 const Home = ()=>{
+    
     //click counter
     useEffect(()=>{
         console.log("entry useEffect")
@@ -58,17 +60,20 @@ const Home = ()=>{
         {
             title:'Parcul National Calimani',
             desc: `Parcul Național Călimani se întinde pe teritoriul a patru județe (Mureș, Suceava, Harghita și Bistrița-Năsăud) și este o zonă specială de conservare.`, 
-            image: Activity2
+            image: Activity2,
+            link:'/template-1/parcul-calimani'
         },
         {
             title:'Partia Dealul Negru',
             desc: 'Pârtia de schi Dealul Negru are un grad de dificultate mediu şi lungimea de 3000 metri. Altitudinea la plecare este de 1250 metri şi la sosire de 850 m, diferenţa de nivel fiind de 400 m.',
-            image: Activity1
+            image: Activity1,
+            link: '/template-1/partia-dealul-negru'
         },
         {
             title:'Agrement ',
             desc: 'Agrement in Vatra Dornei si zonele apropiate. Posibilitati de petrecere a timpului liber, modalitati de relaxare sau activitati de turism activ.',
-            image: Activity3
+            image: Activity3,
+            link: '/template-1'
         },
     ]
     const widget_2_section_3 = []
@@ -116,12 +121,12 @@ const Home = ()=>{
             icon: Opt4
         },
         {
-            name:'Echitatie',
-            icon: Opt5
-        },
-        {
             name:'Restaurant',
             icon: Opt6
+        },
+        {
+            name:'Gratar',
+            icon: Opt5
         },
     ]
 
@@ -134,6 +139,7 @@ const Home = ()=>{
     
     let bgIntro ="https://drive.google.com/uc?id=1zlL-EhlRPNQhbRE2se5Z76PYhga1Z-Vl"
 
+    
     return(
         <div className='t1-home-container' name='top-ref-t1'>
             <AppBar />
@@ -144,7 +150,7 @@ const Home = ()=>{
             }}>
                 <div className='t1-section-1-top'>
                     <div className='t1-section-1-top-top'>
-                        <span>Bine ai venit</span>
+                        <span><i>Bine ai venit</i></span>
                     </div>
                     <div className='t1-section-1-top-center'>
                         <span>Pensiune</span>
@@ -222,8 +228,8 @@ const Home = ()=>{
                                     <span>Contact</span>
                                 </div>
                                 <div className='t1-setcion-0-right-left-icon-container-data'>
-                                    <p style={{display:'block'}}> +40 073 300 6550</p>
-                                    <p style={{display:'block'}}> +40 073 300 6550</p>
+                                    <p style={{display:'block'}}> +40 733 006 550</p>
+                                    <p style={{display:'block'}}> +40 733 006 551</p>
                                 </div>
                         </div>
                     </div>
@@ -314,7 +320,7 @@ const Home = ()=>{
 
 const WidgetsSection3 = ({direction,elements})=>{
     //data = [{},{},{}]
-
+    
     useEffect(()=>{
         console.log("data:",elements)
     })
@@ -337,13 +343,17 @@ const WidgetsSection3 = ({direction,elements})=>{
             {
                 direction == 'left'?
                 <>
-                  <div className='widget-3-first-container'>
+                  <div className='widget-3-first-container' >
                     <div className='widget-3-first-image'>
-                        <img src={elements[0]["image"]} alt="option"/>
+                        <a href={elements[0]["link"]}>
+                            <img src={elements[0]["image"]} alt="option"/>
+                        </a>
                     </div>
                     <div className='widget-3-first-text'>
                         <div className='widget-3-first-text-header'>
+                        <a href={elements[0]["link"]} style={{textDecoration:'none', color:'black'}}>
                             <span>{elements[0]["title"]}</span>
+                        </a>
                         </div>
                         <div className='widget-3-first-text-body'>
                             <span>{shrinkText(elements[0]["desc"])}</span>
@@ -361,15 +371,19 @@ const WidgetsSection3 = ({direction,elements})=>{
                         else 
                         {
                             return(
-                                <div className='widget-3-second-universal'>
+                                <div className='widget-3-second-universal' style={{borer:'1px solid red'}}>
                                     <div className='widget-3-second-univ-left'>
-                                        <img src={el["image"]} alt="option"/>
+                                        <a href={el["link"]}>
+                                            <img src={el["image"]} alt="option"/>
+                                        </a>
                                     </div>
                                     <div className='widget-3-second-univ-right'>
                                         <div className='widget-3-second-univ-right-top'>
+                                        <a href={el["link"]} style={{textDecoration:'none', color: 'black'}}>
                                             <span>
-                                                {el.title}
+                                                    {el.title}
                                             </span>
+                                        </a>
                                         </div>
                                         <div className='widget-3-second-univ-right-bottom'>
                                             <span>{shrinkText(el.desc)}</span>
@@ -394,7 +408,7 @@ const WidgetsSection3 = ({direction,elements})=>{
                         else 
                         {
                             return(
-                                <div className='widget-3-second-universal'>
+                                <div className='widget-3-second-universal' >
                                     <div className='widget-3-second-univ-left'>
                                         <img src={el["image"]} alt="option"/>
                                     </div>
@@ -416,7 +430,7 @@ const WidgetsSection3 = ({direction,elements})=>{
                     })
                 }
             </div>
-            <div className='widget-3-first-container'>
+            <div className='widget-3-first-container' >
                     <div className='widget-3-first-image'>
                         <img src={elements[0]["image"]} alt="option"/>
                     </div>
