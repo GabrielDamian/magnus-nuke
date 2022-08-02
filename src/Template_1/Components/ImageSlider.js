@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{useState,useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -120,20 +120,50 @@ export default function ImageSlider() {
   let Imprejur = [Imprejur2,Imprejur4,Imprejur6,Imprejur7,Imprejur8,Imprejur9,Imprejur10,Imprejur11,Imprejur12,Imprejur13,Imprejur14,Imprejur15,Imprejur16,Imprejur17,Imprejur18,Imprejur19,Imprejur20,Imprejur21]
   let Ciubar = [Ciubar1,Ciubar2]
 
+  const [customMobileSlider, setCustomMobileSlider] = useState({})
+  const [mobileSliderFix, setMobileSliderFix] = useState({})
+
+  useEffect(()=>{
+    console.log("window.innerWidth:",window.innerWidth)
+    if(window.innerWidth < 750)
+    {
+      setCustomMobileSlider({width:'33%', height:'50%',fontSize:'0.7rem'})
+    }
+    else 
+    {
+      setCustomMobileSlider({})
+    }
+  },[])
   return (
-    <Box sx={{ width: '100%', padding: '30px' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange}  variant="scrollable" scrollButtons="auto" aria-label="scrollable auto tabs example">
-          <Tab icon={<BedIcon />} label="Camere" {...a11yProps(0)} />
-          <Tab icon={<RestaurantMenuIcon />} label="Restaurant" {...a11yProps(1)} />
-          <Tab icon={<ForestIcon />} label="Imprejurari" {...a11yProps(2)} />
-          <Tab icon={<LocalBarIcon />} label="Bar" {...a11yProps(3)} />
-          <Tab icon={<CountertopsIcon />} label="Bucatarie" {...a11yProps(4)} />
-          <Tab icon={<WavesIcon />} label="Ciubar" {...a11yProps(5)} />
+    <Box sx={{ width: '100%', padding: '30px'}}>
+      <Box sx={{ 
+        borderBottom: 1, 
+        borderColor: 'divider',
+        display: 'flex',justifyContent: 'center', flexWrap: 'wrap',
+        flexDirection:'row',
+        // border:'1px solid magenta',
+        }}>
+        <Tabs 
+          // orientation="vertical" 
+          value={value} onChange={handleChange}  
+          variant="scrollable" 
+          scrollButtons="auto" 
+          aria-label="scrollable auto tabs example"
+          sx={{
+            flexDirection:'column'
+          }}
+          >
+          <Tab icon={<BedIcon />} label="Camere" {...a11yProps(0)} sx={customMobileSlider}/>
+          <Tab icon={<RestaurantMenuIcon />} label="Restaurant" {...a11yProps(1)}sx={customMobileSlider}/>
+          <Tab icon={<ForestIcon />} label="Imprejurari" {...a11yProps(2)} sx={customMobileSlider}/>
+          <Tab icon={<LocalBarIcon />} label="Bar" {...a11yProps(3)} sx={customMobileSlider}/>
+          <Tab icon={<CountertopsIcon />} label="Bucatarie" {...a11yProps(4)} sx={customMobileSlider}/>
+          <Tab icon={<WavesIcon />} label="Ciubar" {...a11yProps(5)} sx={customMobileSlider}/>
         </Tabs>
       </Box>
+
       <TabPanel value={value} index={0}>
-        <Carousel width="100%">
+        <Carousel width="100%" >
             {
                 CamereImgs.map((el)=>{
                     return(

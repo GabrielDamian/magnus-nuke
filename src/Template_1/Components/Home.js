@@ -149,9 +149,9 @@ const Home = ()=>{
                 backgroundPosition: 'top'
             }}>
                 <div className='t1-section-1-top'>
-                    <div className='t1-section-1-top-top'>
+                    {/* <div className='t1-section-1-top-top'>
                         <span><i>Bine ai venit</i></span>
-                    </div>
+                    </div> */}
                     <div className='t1-section-1-top-center'>
                         <span>Pensiune</span>
                     </div>
@@ -371,7 +371,7 @@ const WidgetsSection3 = ({direction,elements})=>{
                         else 
                         {
                             return(
-                                <div className='widget-3-second-universal' style={{borer:'1px solid red'}}>
+                                <div className='widget-3-second-universal' >
                                     <div className='widget-3-second-univ-left'>
                                         <a href={el["link"]}>
                                             <img src={el["image"]} alt="option"/>

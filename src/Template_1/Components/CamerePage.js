@@ -66,7 +66,7 @@ const CamerePage = ()=>{
                         <span style={{display:"block", fontWeight:'200', borderBottom:'none', fontSize:'0.9rem', marginTop:'10px'}}>*dispunem de 4 astfel de camere</span>
                     </div>
                     <div className="t1-section-camere-top-right">
-                        <a href=''>Suna acum</a>
+                        <a href='/template-1/contact'>Suna acum</a>
                     </div>
                 </div>
                 <div className="t1-section-camere-price">
@@ -74,7 +74,7 @@ const CamerePage = ()=>{
                         <span>Pret: 200 RON/noapte</span>
                     </div>
                     <div className="t1-section-camere-price-bot">
-                        <span>Descriere camera</span>
+                        <span>Fiecare camera are mobilier din lemn masiv, spatioase, luminoase, dotate cu televizor, cu baie proprie si balcon.</span>
                     </div>
                 </div>
                 <div className="t1-section-camere-pictures">

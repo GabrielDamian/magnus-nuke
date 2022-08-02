@@ -38,7 +38,7 @@ const Footer = ()=>{
         },
         {
             icon: MailIcon,
-            name: 'INFO@PEANSIUNEAPOAIANA.COM'
+            name: 'ACUJBOAIEVICA@GMAIL.COM'
         },
     ]
     return (

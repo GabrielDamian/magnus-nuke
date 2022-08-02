@@ -3,3 +3,10 @@
   padding:0;
   box-sizing: border-box;
 }
+@media screen and (max-width: 750px) {
+  .css-heg063-MuiTabs-flexContainer
+  {
+    height:100%;
+    flex-wrap: wrap;
+  }
+}

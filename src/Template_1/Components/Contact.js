@@ -74,7 +74,7 @@ const ContactPage = ()=>{
                                     <span>Email</span>
                                 </div>
                                 <div className='t1-setcion-0-right-left-icon-container-data'>
-                                    <p style={{display:'block'}}> emailTemporar@gmail.com</p>
+                                    <p style={{display:'block'}}> acujboaievica@gmail.com</p>
                                 </div>
                         </div>
                     </div>

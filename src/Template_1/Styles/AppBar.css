@@ -30,7 +30,7 @@
 
 .t1-appbar-items-row a:hover{
     color: #d77b5d;
-    background-color: transparent;
+    background-color: white;
     transition: all 0.2s ease;
     border: 2px solid #d77b5d;
 }
