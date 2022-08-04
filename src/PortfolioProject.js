@@ -23,7 +23,7 @@ const PortfolioProject = ({title,imageHeader,client,descriere,tehnologii,live,bg
             <div className='app-bar-sticky-fix'/>
             <div className='portfolio-proj-content'>
                 <div className='portfolio-proj-content-header'>
-                    <span>Portfolio > Project {title}</span>
+                    <span>Portfolio > Proiect {title}</span>
                 </div>
                 <div className='proj-content-image'>
                     {/* <img src={imageHeader} alt="project-image"/> */}
@@ -86,7 +86,7 @@ const PortfolioProject = ({title,imageHeader,client,descriere,tehnologii,live,bg
             </div>
             <div className='portfolio-proj-live'>
                 <button onClick={()=>{
-                    history(live)
+                    window.location.replace(live)
                 }}>
                     LIVE WEBSITE
                 </button>

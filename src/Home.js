@@ -96,7 +96,7 @@ const Home  = ()=>{
         border: 'Right',
       },
       {
-        name: 'Scandura Tutuianu',
+        name: 'Robert Tutuianu',
         role: '<Full Stack Web Developer>',
         photo: Dude_3,
         border: 'Left'
@@ -248,9 +248,9 @@ const Home  = ()=>{
       ]
       const PortfolioItems = [
         {
-          title:'Pensiunea Poiana',
+          title:'Pensiunea Laricea',
           img: Portfolio1,
-          desc: 'Demo Website',
+          desc: '',
           link: '/portfolio-1'
         },
       ]

@@ -16,6 +16,12 @@ import Demo_2_car from './media/portfolio/2_bg.png';
 import Demo_3_car from './media/portfolio/3_bg.png';
 import Demo_4_car from './media/portfolio/4_bg.png';
 import Demo_5_car from './media/portfolio/5_bg.png';
+
+import Demo_6_car from './media/portfolio/6_bg.png';
+import Demo_7_car from './media/portfolio/7_bg.png';
+import Demo_8_car from './media/portfolio/8_bg.png';
+import Demo_9_car from './media/portfolio/9_bg.png';
+
 import React from 'react';
 
 import axios from 'axios';
@@ -30,14 +36,14 @@ function App() {
  
   const PortfolioData = [
     {
-      title: 'demo 1',
+      title: 'Pensiunea Laricea',
       imageHeader: Portfolio_1_bg,
-      client: 'Demo Template',
-      descriere: 'Demo Website',
-      tehnologii: ['React', 'NodeJs', 'MongoDb', 'Material Ui'],
-      live: '/template-1',
+      client: 'Pensiunea Laricea',
+      descriere: 'Website Pensiune',
+      tehnologii: ['React','Material Ui'],
+      live: 'https://pensiunealaricea.com/',
       route: '/portfolio-1',
-      bg_imgs: [Demo_1_car,Demo_2_car,Demo_3_car,Demo_4_car,Demo_5_car]
+      bg_imgs: [Demo_1_car,Demo_2_car,Demo_3_car,Demo_4_car,Demo_5_car,Demo_6_car,Demo_7_car,Demo_8_car,Demo_9_car]
     },
   ]
 

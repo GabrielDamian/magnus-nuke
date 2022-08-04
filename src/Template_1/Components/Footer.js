@@ -43,21 +43,6 @@ const Footer = ()=>{
     ]
     return (
         <div className='t1-footer-container'>
-            {/* <div className='t1-footer-top'>
-                <div className='t1-footer-top-name'>
-                    <span style={{fontSize:'0.7rem'}}><b>SOCIAL MEDIA</b></span>
-                    <span style={{fontSize:'0.9rem'}}>URMĂREȘTE PENSIUNEA POIANA</span>
-                </div>
-                <div className='t1-footer-top-icons'>
-                {
-                    icons.map((el)=>{
-                        return(
-                            <img src={el.icon} alt='social-media'/>
-                        )
-                    })
-                }
-                </div>
-            </div> */}
             <div className='t1-footer-bottom'>
                 <div className='t1-footer-bottom-top'>
                     <img src={LogoIcon} alt='logo'/>
